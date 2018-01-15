@@ -7,7 +7,7 @@
 
 class RemoveDuplicates{
 	public static void main(String[] args) {
-		int[] arr = {1, 1, 2, 2, 3, 3, 4, 4, 4};
+		int[] arr = {1, 1, 2, 2, 3, 3, 4, 4, 4, 5, 5, 5, 6};
 		printArray(arr);
 		System.out.println("Number of elements in new array = " + removeduplicate(arr));
 		printArray(arr);

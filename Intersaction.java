@@ -8,6 +8,8 @@ class Intersaction{
 	public static void main(String[] args) {
 		test(new int[]{1,2,2,1}, new int[]{2,2,1,1,5});
 		test(new int[]{1}, new int[]{1});
+		test(new int[]{4,7,9,7,6,7}, new int[]{5,0,0,6,1,6,2,2,4});
+
 	}
 
 	public static void test(int[] arr1, int[] arr2){
@@ -22,16 +24,25 @@ class Intersaction{
 	public static int[] findIntersaction(int[] arr1, int[] arr2){
 		int count = 0;
 		ArrayList<Integer> my_list = new ArrayList<>();
-		my_list.add(90909090);
+		my_list.add(9090);
 		ArrayList<Integer> result_list = new ArrayList<>();
 		for(int i: arr1){
 			my_list.add(i);
 		}
 
+		for(int zz: my_list){
+			System.out.println(zz);
+		}
+
 		for(int j: arr2){
 			if(my_list.contains(j)){
 				result_list.add(j);
+				System.out.println("Success1 element = " + j);
 				my_list.remove(j);
+						for(int zz: my_list){
+			System.out.println(zz);
+		}
+				System.out.println("Removed = " + j);
 				count++;
 			}
 		}
