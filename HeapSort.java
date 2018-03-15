@@ -17,8 +17,6 @@ public class HeapSort {
             array3[i] = r.nextInt(50);				//randomly generated array
         }
 
-		//System.out.println("Printing array:");
-		//printarr(array);
 		System.out.println("Printing sorted array:");
 		printarr(array1);
 		System.out.println("Printing reversely sorted array:");
@@ -27,17 +25,6 @@ public class HeapSort {
 		printarr(array3);
 		System.out.println();
 
-/*
-		COMPCOUNT = 0;
-      	long startTime=System.nanoTime();
-		heapsort(array);
-		long stopTime=System.nanoTime();
-		double elapsedTime= (stopTime-startTime)/1e6;
-		System.out.println("Number of comparisons = " + COMPCOUNT);
-		System.out.println("Elapsed Time for First array: "+ elapsedTime +" milliseconds");
-		System.out.println("Printing first ");
-		printarr(array);
-*/
 /*----------------------------------------------------------------------------------------*/
 		
 		System.out.println();
@@ -61,7 +48,6 @@ public class HeapSort {
 		double elapsedTime2= (stopTime2-startTime2)/1e6;
 		System.out.println("Number of comparisons = " + COMPCOUNT);
 		System.out.println("Elapsed Time for Reversely Sorted array: "+ elapsedTime2 +" milliseconds");
-		//System.out.println("Printing third ");
 		printarr(array1);
 
 /*----------------------------------------------------------------------------------------*/

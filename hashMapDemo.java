@@ -10,7 +10,7 @@ class HashMapDemo{
 		addInMap(myMap, "Mike", 23);
 		addInMap(myMap, "Dick", 24);
 		addInMap(myMap, "Dick", 24);
-		//printMap(myMap);
+		printMap(myMap);
 	}
 
 
@@ -18,10 +18,10 @@ class HashMapDemo{
 		map.add(name, num);
 	}
 
-	// public static void printMap(Map map){
-	// 	Set<String> keySet = map.getKeySet();
-	// 	for(String s: keySet){
-	// 		System.out.println("Key: "+ s + " Value: " + map.getValue(s));
-	// 	}
-	// }
+	 public static void printMap(Map map){
+	 	Set<String> keySet = map.getKeySet();
+	 	for(String s: keySet){
+	 		System.out.println("Key: "+ s + " Value: " + map.getValue(s));
+	 	}
+	 }
 }

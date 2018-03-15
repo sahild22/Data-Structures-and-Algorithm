@@ -1,37 +1,37 @@
 import java.util.*;
 
-// class LetterCombinationsPhoneNumber{
+ class LetterCombinationsPhoneNumber{
 	
-// 	// public static List<String> letterCombinations(String digits) {
+ 	 public static List<String> letterCombinations(String digits) {
         
-//  //    }
+      }
 
-//     public static HashMap createMap(){
-//     	HashMap<Integer, String[]> digitMap = new HashMap<>();
-//     	digitMap.put(2, new String[]{"a", "b", "c"});
-//     	digitMap.put(3, new String[]{"d", "e", "f"});
-//     	digitMap.put(4, new String[]{"g", "h", "i"});
-//     	digitMap.put(5, new String[]{"j", "k", "l"});
-//     	digitMap.put(6, new String[]{"m", "n", "o"});
-//     	digitMap.put(7, new String[]{"p", "q", "r", "s"});
-//     	digitMap.put(8, new String[]{"t", "u", "v"});
-//     	digitMap.put(9, new String[]{"w", "x", "y", "z"});
+     public static HashMap createMap(){
+     	HashMap<Integer, String[]> digitMap = new HashMap<>();
+     	digitMap.put(2, new String[]{"a", "b", "c"});
+     	digitMap.put(3, new String[]{"d", "e", "f"});
+     	digitMap.put(4, new String[]{"g", "h", "i"});
+     	digitMap.put(5, new String[]{"j", "k", "l"});
+     	digitMap.put(6, new String[]{"m", "n", "o"});
+     	digitMap.put(7, new String[]{"p", "q", "r", "s"});
+     	digitMap.put(8, new String[]{"t", "u", "v"});
+     	digitMap.put(9, new String[]{"w", "x", "y", "z"});
 
-//     	return digitMap;
-//     }
+     	return digitMap;
+     }
 
-//     public static void printMap(HashMap m){
-//     		String[] arr = m.get(2);
-//     		for(String s: arr){
-//     			System.out.println(s);
-//     		}
-//     }
-// 	public static void main(String[] args) {
-// 		HashMap myMap = createMap();
-// 		printMap(myMap);
+     public static void printMap(HashMap m){
+     		String[] arr = m.get(2);
+     		for(String s: arr){
+     			System.out.println(s);
+     		}
+     }
+ 	public static void main(String[] args) {
+ 		HashMap myMap = createMap();
+ 		printMap(myMap);
 
-// 	}
-// }
+ 	}
+ }
 
 class LetterCombinationsPhoneNumber{
 	public static List<String> letterCombinations(String digits) {
