@@ -1,8 +1,8 @@
 class MoveZeros{
+
 	public static void main(String[] args) {
 		printArray(moveArray(new int[]{1,2,0,3,0,5}));
 	}
-
 	public static int[] moveArray(int[] arr){
 		int result = 0;
 		int count = 0;
@@ -14,7 +14,6 @@ class MoveZeros{
 				count++;
 			}
 		}
-
 		for(int i = result; i < result+count; i++){
 			arr[i] = 0;
 		}

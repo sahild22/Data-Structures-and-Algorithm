@@ -369,7 +369,6 @@ class SortingAlgorithms{
 		}else{
 			return false;
 		}
-
 	}
 
 	public static void printarr(int[] array){

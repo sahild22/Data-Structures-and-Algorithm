@@ -3,8 +3,6 @@ import java.util.Random;
 class QuickSort{
 	public static int COMPCOUNT = 0;
 		public static void main(String [] args){
-			
-			//int array[] = {12,9,7,15,10};
 			int[] array1={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32};
 			int[] array2=new int[32];					//reversely sorted array
 			for(int i=31,j=0; i>=0;i--,j++)	{
@@ -100,7 +98,6 @@ class QuickSort{
 			}else{
 				return false;
 			}
-
 		}
 
 		public static boolean COMPARE1(int X, int Y){
@@ -113,12 +110,10 @@ class QuickSort{
 	
 	}
 
-
 		public static void printarr(int[] array){
 			for(int i = 0; i < array.length; i++){
 				System.out.print(array[i] + " ");
 			}
 			System.out.println();
 		}
-	
 }

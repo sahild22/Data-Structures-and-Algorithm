@@ -14,15 +14,13 @@ class FindMax{
 	public static int findMax(int[] a, int n){
 		if(n == 1){
 			return a[0];
+		}else{
+			int t = findMax(a, n-1);
+			if(t < a[n-1]){
+				return a[n-1];
+			}else{
+				return t;
 			}
-			else{
-				int t = findMax(a, n-1);
-				if(t < a[n-1]){
-					return a[n-1];
-				}else{
-					return t;
-				}
-
-			}	
+		}
 	}
 }

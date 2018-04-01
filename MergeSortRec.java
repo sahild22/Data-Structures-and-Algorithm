@@ -4,7 +4,6 @@ class MergeSortRec{
 		printArray(array);
 		mergeSort(array, 0, array.length - 1);
 		printArray(array);
-
 	}
 
 	public static void mergeSort(int[] arr, int start, int end){
@@ -47,6 +46,5 @@ class MergeSortRec{
 			System.out.print(", " + arr[i]);
 		}
 		System.out.println();
-
 	}
 }
