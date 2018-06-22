@@ -10,15 +10,18 @@ public class CountCommentsFSM {
                 {0, 0, 0}};
 
         String[] input = new String[]
-                {"abcnkjsbdcibkjsdb",
-                "//adadasdadss",
-                "aaaaaa//aaaaaa",
-                "/*aaaaaaa/",
-                "dsed//",
-                "aaaa*/",
-                "*/gfgjfjg",
-                "gfg/*",
-                "aaaa//"
+                {"import java.util.*",
+                "//This is first single line comment",
+                "int slcc = 0;",
+                "int bcc = 0;",
+                "boolean inBlock = false;",
+                "if(!inblock)//Not a block comment",
+                "/*First bock comment begins/",
+                "single line comment in block comment//",
+                "end of block comment*/",
+                "*/test",
+                "test/*",
+                "//"
                 };
 
         int slcc = 0;
