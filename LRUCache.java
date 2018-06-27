@@ -1,5 +1,5 @@
-public class LRUCache {
-    static class Node{
+class LRUCache {
+     static class Node{
         Node next;
         int key;
         int value;
@@ -8,16 +8,21 @@ public class LRUCache {
             this.value = value;
         }
     }
-    static Node head;
-    static Node tail;
-    static int size = 0;
-    static int capacity;
+    private static Node head;
+    private static Node tail;
+    private static int size = 0;
+    private static int capacity;
 
-    public static void put(int key, int value){
+    LRUCache(int capacity){
+        this.capacity = capacity;
+    }
+
+    void put(int key, int value){
         Node n = new Node(key, value);
         if(size == capacity){
-            tail.key = key;
-            tail.value = value;
+            head.next = n;
+            head = n;
+            tail = tail.next;
             return;
         }
         if(head == null){
@@ -25,22 +30,28 @@ public class LRUCache {
             tail = head;
             size++;
         }else{
-            tail.next = n;
-            tail = n;
+            head.next = n;
+            head = n;
             size++;
         }
 
     }
 
-    public static Node get(int key){
+    Node get(int key){
         if(size == 0) return null;
-        if(size == 1 || head.key == key) return head;
-        Node result = head;
+        if(tail.key == key){
+            Node i = tail;
+            head.next = i;
+            head = i;
+            tail = tail.next;
+            return tail;
+        }
+        Node result = tail;
         while(result != null){
             if(result.next.key == key){
                 Node k = result.next;
                 result.next = result.next.next;
-                k.next = head;
+                head.next = k;
                 head = k;
                 return head;
             }else{
@@ -50,9 +61,9 @@ public class LRUCache {
         return null;
     }
 
-    public static void printLRUCache(){
-        Node n = head;
-        while(head != null && n != null){
+     static void printLRUCache(){
+        Node n = tail;
+        while(tail != null && n != null){
             System.out.println("Key: " + n.key + ", Value:" + n.value);
             n = n.next;
         }
@@ -61,17 +72,17 @@ public class LRUCache {
 
 class Main{
     public static void main(String[] args) {
-        LRUCache cache = new LRUCache();
-        cache.capacity = 5;
+        LRUCache cache = new LRUCache(5);
         cache.put(1,1);
         cache.put(2,2);
         cache.put(3,3);
-       // LRUCache.Node result = cache.get(3);
-        //System.out.println("Result{Key: " + result.key + ", Value: " + result.value + "}");
+        cache.get(1);
         cache.put(4,4);
         cache.put(5,5);
         cache.put(6,6);
+        cache.get(3);
+        cache.put(7,7);
 
-        cache.printLRUCache();
+        LRUCache.printLRUCache();
     }
 }
